@@ -17,7 +17,7 @@ const Hero = () => {
 			/>
 
 			<div className='relative h-full bg-dark/80'>
-				<div className='max-w-7xl mx-auto grid place-items-center lg:grid-cols-3   lg:gap-16'>
+				<div className='max-w-7xl mx-auto grid place-items-center lg:grid-cols-3 h-full   lg:gap-16'>
 					<motion.div
 						className='lg:col-span-1 order-2 lg:order-1'
 						initial={{ scale: 0.98 }}

@@ -27,6 +27,7 @@ const Snip = () => {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1, delay: 0.1 }}
+			className="mx-2 lg:mx-0"
 
 			>
 				For over 15 years,{' '}

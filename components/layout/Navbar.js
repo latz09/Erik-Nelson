@@ -6,9 +6,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
 	return (
-		<div className='max-w-7xl mx-auto w-full py-2'>
-			<div className='grid gap-8'>
-				<QuickContact />
+		<div className='max-w-7xl mx-auto w-full py-2 lg:py-8 '>
+			<div className='grid gap-4 lg:gap-8 pt-8'>
 				<div className='text-4xl lg:text-6xl'>
 					<Logo />
 				</div>
@@ -20,9 +19,9 @@ const Navbar = () => {
 
 export default Navbar;
 
-const QuickContact = () => {
+export const QuickContact = () => {
 	return (
-		<div className='flex justify-between mx-2 lg:space-x-8 lg:place-self-end text-lg tracking-wider'>
+		<div className='grid gap-2 place-items-center  lg:gap-0 lg:flex justify-between mx-2 lg:space-x-8  text-lg tracking-wider'>
 			<div className='flex space-x-2 items-center'>
 				<span className='text-2xl text-blue'>
 					<AiFillPhone />
@@ -74,15 +73,14 @@ export const Logo = () => {
 const Navigation = () => {
 	return (
 		<>
-		{/* mobile to large */}
-		<div className="lg:hidden  grid place-self-end mx-4">
-			<span className="text-4xl">
-				<GiHamburgerMenu />
-			</span>
+			{/* mobile to large */}
+			<div className='lg:hidden  grid place-self-end mx-4'>
+				<span className='text-4xl'>
+					<GiHamburgerMenu />
+				</span>
+			</div>
 
-		</div>
-
-		{/* large and up */}
+			{/* large and up */}
 			<div className='hidden lg:flex justify-between w-full'>
 				{navLinks.map((link, index) => (
 					<Link href={link.path} key={index}>
