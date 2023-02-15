@@ -1,4 +1,4 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 const AboutSnip = () => {
 	return (
 		<div className='max-w-5xl mx-auto'>
@@ -24,24 +24,20 @@ const Snip = () => {
 				transparent business pracices.
 			</p>
 			<motion.div
-			initial={{ opacity: 0 }}
-			whileInView={{ opacity: 1 }}
-			transition={{ duration: 1, delay: 0.1 }}
-			className="mx-2 lg:mx-0"
-
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{ duration: 1, delay: 0.1 }}
+				className='mx-2 lg:mx-0'
 			>
 				For over 15 years,{' '}
-				<span className='font-semibold text-dark'>Erik Nelson Plumbing</span>{' '}
-				has provided{' '}
-				<span className='font-semibold text-dark'>
+				<span className='font-semibold'>Erik Nelson Plumbing</span> has provided{' '}
+				<span className='font-semibold '>
 					trustworthy, dependable, and economical plumbing services in the twin
 					cities
 				</span>{' '}
 				and the surrounding areas. Over the years we have been in a business we
 				have been dedicated to helping our local area by solving their{' '}
-				<span className='font-semibold text-dark'>
-					challenging plumbing needs.
-				</span>
+				<span className='font-semibold '>challenging plumbing needs.</span>
 			</motion.div>
 		</div>
 	);
