@@ -3,7 +3,7 @@ const AboutSnip = () => {
 	return (
 		<div className='max-w-5xl mx-auto'>
 			<div className='grid gap-2 text-center  '>
-				<span className='text-5xl font-semibold text-dark/80'>
+				<span className='text-3xl lg:text-5xl font-semibold text-dark/80'>
 					Thanks For Visiting Us
 				</span>
 				<div>
@@ -18,8 +18,8 @@ export default AboutSnip;
 
 const Snip = () => {
 	return (
-		<div className='grid gap-4 text-xl '>
-			<p className='text-3xl  font-semibold '>
+		<div className='grid gap-4 text-lg lg:text-xl '>
+			<p className='text-xl lg:text-3xl  font-semibold '>
 				We Focus on cleanliness, client communication, quality of work and
 				transparent business pracices.
 			</p>

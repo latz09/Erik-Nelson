@@ -17,9 +17,9 @@ const Hero = () => {
 			/>
 
 			<div className='relative h-full bg-dark/80'>
-				<div className='max-w-7xl mx-auto grid place-items-center grid-cols-3  h-full gap-16'>
+				<div className='max-w-7xl mx-auto grid place-items-center lg:grid-cols-3   lg:gap-16'>
 					<motion.div
-						className='col-span-1'
+						className='lg:col-span-1 order-2 lg:order-1'
 						initial={{ scale: 0.98 }}
 						animate={{ scale: 1 }}
 						transition={{
@@ -34,6 +34,7 @@ const Hero = () => {
 							initial={{ x: -400, scale: 0.9 }}
 							animate={{ x: 0, scale: 1 }}
 							transition={{ duration: 1, delay: 0.2 }}
+							className=""
 						>
 							<Image
 								src={companyVan}
@@ -43,7 +44,7 @@ const Hero = () => {
 							/>
 						</motion.div>
 					</motion.div>
-					<div className='col-span-2 place-items-center grid gap-2 '>
+					<div className='lg:col-span-2 place-items-center flex flex-col gap-4 pt-8 lg:grid   lg:gap-2 order-1 lg:order-2  '>
 						<HeroText />
 						<ButtonLink title='Request a quote' path='/' />
 					</div>
@@ -57,8 +58,8 @@ export default Hero;
 
 const HeroText = () => {
 	return (
-		<div className=' text-light text-2xl grid gap-2 w-3/4 mx-auto rounded   tracking-wide '>
-			<span className='text-5xl font-bold tracking-wider text-red font-tinos scale-y-110'>
+		<div className=' text-light text-lg lg:text-2xl grid gap-2 lg:gap-2 lg:w-3/4 mx-auto rounded text-center lg:text-start  tracking-wide '>
+			<span className='text-3xl lg:text-5xl font-bold tracking-wider text-red font-tinos scale-y-110'>
 				Family Owned and Trusted
 			</span>
 			<motion.div className='mx-2'

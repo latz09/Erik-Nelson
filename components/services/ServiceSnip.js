@@ -6,7 +6,7 @@ import IconFilter from '../utils/IconFilter';
 const ServiceSnip = () => {
 	return (
 		<>
-			<div className='max-w-[90rem] mx-auto grid grid-cols-3 gap-8 '>
+			<div className='max-w-[90rem] mx-auto grid lg:grid-cols-3 gap-16 lg:gap-8 '>
 				{services.map((service, index) => (
 					<div
 						key={service.id}

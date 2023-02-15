@@ -1,16 +1,20 @@
 import { reviews } from '../../data/reviews';
 import { AiFillStar } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+import ButtonLink from '../utils/ButtonLink';
 const Reviews = () => {
 	return (
 		<div className='grid gap-8 max-w-7xl mx-auto'>
-			{/* <span className="text-center text-3xl italic text-gray-700">Forming lasting relationships with our community</span> */}
-			<div className='grid grid-cols-2 gap-16 place-items-center '>
+			<span className="text-center text-3xl italic text-gray-700">Forming lasting relationships with our community</span>
+			<div className='grid lg:grid-cols-2 gap-16 place-items-center '>
 				{reviews.map((review) => (
-					<div key={review.id} className=''>
+					<div key={review.id} className='mx-8'>
 						<Review name={review.name} description={review.description} />
 					</div>
 				))}
+			</div>
+			<div className="grid place-items-center my-4 lg:my-8">
+				<ButtonLink title={'Read more reviews!'} path={'/'} />
 			</div>
 		</div>
 	);
@@ -21,9 +25,9 @@ export default Reviews;
 const Review = ({ name, description }) => {
 	return (
 		<div className='grid gap-2 text-justify text-gray-700'>
-			<span className='text-2xl font-semibold font-tinos '>{name}.</span>
+			<span className='text-lg lg:text-2xl font-semibold font-tinos '>{name}.</span>
 			<FiveStars />
-			<span className='mx-8 text-lg text-dark '>{description}</span>
+			<span className='mx-4 lg:mx-8 lg:text-lg text-dark '>{description}</span>
 		</div>
 	);
 };

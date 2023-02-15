@@ -13,7 +13,7 @@ const Rates = () => {
 			transition={{ duration: 1.2 }}
 		>
 			<RatesHeading />
-			<div className='grid grid-cols-2  gap-8'>
+			<div className='grid lg:grid-cols-2  gap-8 mx-4 lg:mx-0'>
 				{rates.map((rate, index) => (
 					<motion.div
 						key={rate.id}
@@ -26,9 +26,13 @@ const Rates = () => {
 					</motion.div>
 				))}
 			</div>
-			<div className=' flex justify-between items-center '>
-				<ButtonLink title={'Contact Now'} path={'/'} />
-				<WarrantyLink />
+			<div className='grid gap-12 lg:gap-0  lg:flex lg:justify-between lg:items-center '>
+				<div className='order-2 lg:order-1 grid place-items-center'>
+					<ButtonLink title={'Contact Now'} path={'/'} />
+				</div>
+				<div className='order-1 lg:order-2 grid place-items-center'>
+					<WarrantyLink />
+				</div>
 			</div>
 		</motion.div>
 	);
@@ -39,8 +43,10 @@ export default Rates;
 const RatesHeading = () => {
 	return (
 		<div className='grid gap-2 tracking-wider text-center font-tino'>
-			<span className='text-4xl font-semibold font-tinos'>Upfront Pricing</span>
-			<span className='text-xl text-dark   '>
+			<span className='text-2xl lg:text-4xl font-semibold font-tinos'>
+				Upfront Pricing
+			</span>
+			<span className='text-lg lg:text-xl text-dark   '>
 				We proudly offer exceptional service, competitive pricing, and superior
 				quality
 			</span>
@@ -59,15 +65,15 @@ const RatesCard = ({ rate }) => {
 
 const WarrantyLink = () => {
 	return (
-		<>
+		<div>
 			<Link href='/'>
-				<button className='font-semibold tracking-wide text-red-600/80 text-2xl flex items-center space-x-2'>
+				<button className='font-semibold tracking-wide text-red-600/80 text-2xl flex items-center space-x-2 '>
 					<span> Upfront warranty info</span>
 					<span className=''>
 						<BsFillFileTextFill />
 					</span>
 				</button>
 			</Link>
-		</>
+		</div>
 	);
 };
