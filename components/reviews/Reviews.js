@@ -49,7 +49,7 @@ const FiveStars = () => {
 								repeat: Infinity,
 								repeatType: 'reverse',
 								delay: 0.2 * i,
-								repeatDelay: .4,
+							
 							}}
 						>
 							<AiFillStar />
