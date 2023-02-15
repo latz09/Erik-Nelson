@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { navLinks } from '../../data/navigation';
 import { AiFillPhone, AiFillMail } from 'react-icons/ai';
+import {  motion } from 'framer-motion';
+
 
 const Navbar = () => {
 	return (
@@ -43,18 +45,27 @@ const QuickContact = () => {
 export const Logo = () => {
 	const areas = ['MSP', 'Edina', 'Richfield', 'Roseville', 'St Anthony'];
 	return (
-		<div className='place-items-center grid gap-2'>
+		<motion.div className='place-items-center grid gap-2'
+		 		initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 0.1, duration: 1 }}
+		>
 			<span className=' text-red font-semibold font-tinos scale-y-110 text-center'>
 				Erik Nelson Plumbing LLC
 			</span>
 			<div className='flex space-x-8 text-xl '>
 				{areas.map((area, index) => (
-					<span key={index} className='tracking-widest'>
+					<motion.div key={index} className='tracking-widest'
+					initial={{ opacity: 0, scale: 0 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ delay: 0.2 * index, duration: 1.4 }}
+					
+					>
 						{area}
-					</span>
+					</motion.div>
 				))}
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

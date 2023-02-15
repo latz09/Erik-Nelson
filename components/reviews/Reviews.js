@@ -1,5 +1,6 @@
 import { reviews } from '../../data/reviews';
 import { AiFillStar } from 'react-icons/ai';
+import { motion } from 'framer-motion';
 const Reviews = () => {
 	return (
 		<div className='grid gap-8 max-w-7xl mx-auto'>
@@ -33,9 +34,27 @@ const FiveStars = () => {
 		<>
 			<div className='flex space-x-2'>
 				{stars.map((s, i) => (
-					<span key={i} className='text-red-600/80 text-lg'>
-                        <AiFillStar />
-					</span>
+					<motion.div
+						key={i}
+						className='text-red text-lg'
+						initial={{ opacity: 0, scale: 0 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 1.3, delay: 0.2 * i }}
+					>
+						<motion.div
+							initial={{ scale: 0.75, opacity: .85 }}
+							whileInView={{ scale: 1.0, opacity: 1 }}
+							transition={{
+								duration: 1,
+								repeat: Infinity,
+								repeatType: 'reverse',
+								delay: 0.2 * i,
+								repeatDelay: .4,
+							}}
+						>
+							<AiFillStar />
+						</motion.div>
+					</motion.div>
 				))}
 			</div>
 		</>

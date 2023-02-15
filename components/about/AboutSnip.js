@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion';
 const AboutSnip = () => {
 	return (
 		<div className='max-w-5xl mx-auto'>
@@ -22,7 +23,12 @@ const Snip = () => {
 				We Focus on cleanliness, client communication, quality of work and
 				transparent business pracices.
 			</p>
-			<p>
+			<motion.div
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			transition={{ duration: 1, delay: 0.1 }}
+
+			>
 				For over 15 years,{' '}
 				<span className='font-semibold text-dark'>Erik Nelson Plumbing</span>{' '}
 				has provided{' '}
@@ -35,7 +41,7 @@ const Snip = () => {
 				<span className='font-semibold text-dark'>
 					challenging plumbing needs.
 				</span>
-			</p>
+			</motion.div>
 		</div>
 	);
 };

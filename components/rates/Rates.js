@@ -1,25 +1,36 @@
 import { rates } from '../../data/rates';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { BsFillFileTextFill } from 'react-icons/bs';
 import ButtonLink from '../utils/ButtonLink';
 
 const Rates = () => {
 	return (
-		<div className='grid gap-16 tracking-wider max-w-5xl mx-auto'>
+		<motion.div
+			className='grid gap-16 tracking-wider max-w-5xl mx-auto'
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			transition={{ duration: 1.2 }}
+		>
 			<RatesHeading />
 			<div className='grid grid-cols-2  gap-8'>
-				{rates.map((rate) => (
-					<div key={rate.id} className=' shadow-lg'>
+				{rates.map((rate, index) => (
+					<motion.div
+						key={rate.id}
+						className=' shadow-lg'
+						initial={{ opacity: 0, scale: 0.8 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 1, delay: 0.2 * index }}
+					>
 						<RatesCard rate={rate} />
-					</div>
+					</motion.div>
 				))}
 			</div>
 			<div className=' flex justify-between items-center '>
 				<ButtonLink title={'Contact Now'} path={'/'} />
 				<WarrantyLink />
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

@@ -1,12 +1,13 @@
 import { GiWashingMachine, GiStraightPipe } from 'react-icons/gi';
 import { MdPlumbing } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 const IconFilter = ({ name }) => {
 	return (
 		<>
-			<div
+			<motion.div
 				className='text-9xl '
-				initial={{ scale: 0.93 }}
+				initial={{ scale: 0.96 }}
 				animate={{ scale: 1 }}
 				transition={{ duration: 1.4, repeat: Infinity, repeatType: 'mirror' }}
 			>
@@ -29,7 +30,7 @@ const IconFilter = ({ name }) => {
 					</span>
 				)}
 				
-			</div>
+			</motion.div>
 		</>
 	);
 };
