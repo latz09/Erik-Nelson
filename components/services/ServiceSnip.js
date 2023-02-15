@@ -21,7 +21,7 @@ const ServiceSnip = () => {
 							<div>
 								<IconFilter name={service.name} />
 							</div>
-							<span className='text-3xl font-semibold'>{service.name}</span>
+							<span className='text-3xl font-semibold text-center'>{service.name}</span>
 						</motion.div>
 						<span className='text-center px-4 text-lg text-gray-700 font-semibold  '>
 							{service.description}

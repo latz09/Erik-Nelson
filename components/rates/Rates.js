@@ -13,7 +13,7 @@ const Rates = () => {
 			transition={{ duration: 1.2 }}
 		>
 			<RatesHeading />
-			<div className='grid lg:grid-cols-2  gap-8 mx-4 lg:mx-0'>
+			<div className='grid lg:grid-cols-2  gap-8 mx-4 xl:mx-0'>
 				{rates.map((rate, index) => (
 					<motion.div
 						key={rate.id}
