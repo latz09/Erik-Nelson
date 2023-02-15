@@ -6,7 +6,7 @@ import IconFilter from '../utils/IconFilter';
 const ServiceSnip = () => {
 	return (
 		<>
-			<div className='max-w-[90rem] mx-auto grid grid-cols-3 gap-8'>
+			<div className='max-w-[90rem] mx-auto grid grid-cols-3 gap-8 '>
 				{services.map((service) => (
 					<div
 						key={service.id}
@@ -18,7 +18,7 @@ const ServiceSnip = () => {
 							</div>
 							<span className='text-3xl font-semibold'>{service.name}</span>
 						</div>
-						<span className='text-center px-4 text-lg text-gray-700 font-semibold '>
+						<span className='text-center px-4 text-lg text-gray-700 font-semibold  '>
 							{service.description}
 						</span>
 					</div>

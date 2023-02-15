@@ -5,9 +5,11 @@ import { AiFillPhone, AiFillMail } from 'react-icons/ai';
 const Navbar = () => {
 	return (
 		<div className='max-w-7xl mx-auto w-full py-2'>
-			<div className='grid gap-4'>
+			<div className='grid gap-8'>
 				<QuickContact />
-				<Logo />
+				<div className='text-6xl'>
+					<Logo />
+				</div>
 				<Navigation />
 			</div>
 		</div>
@@ -18,31 +20,38 @@ export default Navbar;
 
 const QuickContact = () => {
 	return (
-		<div className='grid gap-1 place-self-end'>
+		<div className='flex space-x-8 place-self-end text-lg tracking-wider'>
 			<div className='flex space-x-2 items-center'>
-				<span className='text-2xl'>
+				<span className='text-2xl text-blue'>
 					<AiFillPhone />
 				</span>
 				<span>612-242-6483</span>
 			</div>
 			<div className='flex space-x-2'>
-				<span className='text-2xl'>
+				<span className='text-2xl text-blue'>
 					<AiFillMail />
 				</span>
-				<span>info@eriknelsonplumbing.com</span>
+				<div>
+					info<span className='text-red scale-105 font-bold'>@</span>
+					eriknelsonplumbing.com
+				</div>
 			</div>
 		</div>
 	);
 };
 
-const Logo = () => {
-	const areas = ['MSP', 'Edina', 'Richfield', 'RoseVille', 'St Anthony'];
+export const Logo = () => {
+	const areas = ['MSP', 'Edina', 'Richfield', 'Roseville', 'St Anthony'];
 	return (
-		<div className='place-items-center grid gap-1'>
-			<span className='text-4xl'>Erik Nelson Plumbing LLC</span>
-			<div className='flex space-x-4 '>
+		<div className='place-items-center grid gap-2'>
+			<span className=' text-red font-semibold font-tinos scale-y-110 text-center'>
+				Erik Nelson Plumbing LLC
+			</span>
+			<div className='flex space-x-8 text-xl '>
 				{areas.map((area, index) => (
-					<span key={index}>{area}</span>
+					<span key={index} className='tracking-widest'>
+						{area}
+					</span>
 				))}
 			</div>
 		</div>
@@ -54,7 +63,9 @@ const Navigation = () => {
 		<div className='flex justify-between w-full'>
 			{navLinks.map((link, index) => (
 				<Link href={link.path} key={index}>
-					<span className=''>{link.name}</span>
+					<span className='p-4 text-xl font-semibold tracking-wide text-blue uppercase hover:font-bold hover:scale-105 transition duration-700 cursor-pointer'>
+						{link.name}
+					</span>
 				</Link>
 			))}
 		</div>

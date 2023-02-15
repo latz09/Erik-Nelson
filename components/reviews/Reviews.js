@@ -20,9 +20,9 @@ export default Reviews;
 const Review = ({ name, description }) => {
 	return (
 		<div className='grid gap-2 text-justify text-gray-700'>
-			<span className='text-2xl font-semibold '>{name}.</span>
+			<span className='text-2xl font-semibold font-tinos '>{name}.</span>
 			<FiveStars />
-			<span className='mx-8 text-lg'>{description}</span>
+			<span className='mx-8 text-lg text-dark '>{description}</span>
 		</div>
 	);
 };

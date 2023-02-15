@@ -27,9 +27,9 @@ export default Rates;
 
 const RatesHeading = () => {
 	return (
-		<div className='grid gap-2 tracking-wider text-center'>
-			<span className='text-4xl font-semibold'>Upfront Pricing</span>
-			<span className='text-2xl  font-semibold text-gray-700'>
+		<div className='grid gap-2 tracking-wider text-center font-tino'>
+			<span className='text-4xl font-semibold font-tinos'>Upfront Pricing</span>
+			<span className='text-xl text-dark   '>
 				We proudly offer exceptional service, competitive pricing, and superior
 				quality
 			</span>
@@ -39,9 +39,9 @@ const RatesHeading = () => {
 
 const RatesCard = ({ rate }) => {
 	return (
-		<div className='grid gap-1 text-center p-4 rounded border border-red-600/50 h-full'>
-			<span className='text-2xl font-semibold '>{rate.name}</span>
-			<span className=''>{rate.description}</span>
+		<div className='grid gap-1 text-center p-4 rounded border border-blue/40 h-full hover:border-blue/100 transtion duration-700 '>
+			<span className='text-2xl font-semibold font-tinos '>{rate.name}</span>
+			<span className='text-dark font-semibold'>{rate.description}</span>
 		</div>
 	);
 };

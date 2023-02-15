@@ -11,13 +11,16 @@ module.exports = {
 	theme: {
 		extend: {},
 		colors: {
-			dark: '#231506',
-			// orange: '#D97818',
-			orange: '#F69C32',
-			light1: '#FFF7ED',
-			light2: '#DFE0DF',
+			dark: '#141633',
+			light: '#F5F5FB',
 			black: '#000000',
 			white: '#FFFFFF',
+			red: '#DB3D3C',
+			blue: '#41457C',
+		},
+		fontFamily: {
+			tinos: ['Tinos', 'serif'],
+			nunito: ['Nunito Sans', 'sans-serif'],
 		},
 	},
 	plugins: [],

@@ -5,13 +5,13 @@ const IconFilter = ({ name }) => {
 	return (
 		<>
 			<div
-				className='text-9xl'
+				className='text-9xl '
 				initial={{ scale: 0.93 }}
 				animate={{ scale: 1 }}
 				transition={{ duration: 1.4, repeat: Infinity, repeatType: 'mirror' }}
 			>
 				{name === 'Plumbing' && (
-					<span className='  '>
+					<span className=' '>
 						{' '}
 						<MdPlumbing />
 					</span>
@@ -23,7 +23,7 @@ const IconFilter = ({ name }) => {
 					</span>
 				)}
 				{name === 'Gas Appliance Installation' && (
-					<span className='  '>
+					<span className=' text-red '>
 						{' '}
 						<GiWashingMachine />
 					</span>
