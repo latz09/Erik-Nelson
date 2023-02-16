@@ -6,8 +6,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
 	return (
-		<div className='max-w-7xl mx-auto w-full py-2 lg:py-8 '>
-			<div className='grid gap-4 lg:gap-8 pt-8'>
+		<div className='max-w-7xl mx-auto w-full py-2 lg:py-6 '>
+			<div className='grid gap-4 lg:gap-6 '>
 				<div className='text-4xl lg:text-6xl'>
 					<Logo />
 				</div>
@@ -84,7 +84,7 @@ const Navigation = () => {
 			<div className='hidden lg:flex justify-between w-full'>
 				{navLinks.map((link, index) => (
 					<Link href={link.path} key={index}>
-						<span className='p-4 text-xl font-semibold tracking-wide text-blue uppercase hover:font-bold hover:scale-105 transition duration-700 cursor-pointer'>
+						<span className='py-2 text-xl font-semibold tracking-wide text-blue uppercase hover:font-bold hover:scale-105 transition duration-700 cursor-pointer'>
 							{link.name}
 						</span>
 					</Link>
