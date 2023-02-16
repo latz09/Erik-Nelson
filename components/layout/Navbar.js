@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
 	return (
-		<div className='max-w-7xl mx-auto w-full py-2 lg:py-6 '>
+		<div className='max-w-7xl mx-auto w-full py-6 '>
 			<div className='grid gap-4 lg:gap-6 '>
 				<div className='text-4xl lg:text-6xl'>
 					<Logo />
